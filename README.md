@@ -14,7 +14,7 @@ https://arxiv.org/abs/1712.05825
 
 ## Running our algorithms
 
-Example.m is a simple file containg some examples for how to run our code on small networks. 
+Example.m is a simple file containing some examples for how to run our code on small networks. 
 
 Additionally, we include a folder with code for each of the experiments in the paper. These experiments rely on the installation of a large number of outside packages not included in this repository. These codes may not work for you without a significant amount of setup work.
 
