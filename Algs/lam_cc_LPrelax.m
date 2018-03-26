@@ -9,6 +9,7 @@ function [Dist,Bound] = lam_cc_LPrelax(A,lam,T)
 %   giving a lower bound on the optimal objective
 
 if nargin < 3
+    n = size(A,1);
     T = triangle_inequality(n);
 end
 

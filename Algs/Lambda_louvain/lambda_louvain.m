@@ -26,6 +26,10 @@ if nargin < 4
     itlim = n;
 end
 
+if nargin < 3
+    w = ones(n,1);
+end
+
 % Get the updated clustering based on one step 
 cnew = ll_step(A,lam,w,itlim);
 

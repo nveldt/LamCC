@@ -56,7 +56,7 @@ model.modelsense = 'min';
 clear params;
 
 % Have strict tolerance constraints
-params.outputflag = 1;
+params.outputflag = 0;
 params.OptimalityTol = 1e-9;    % minimum value for tolerance
 params.FeasibilityTol = 1e-9;   % also the minimum value for tolerance
 result = gurobi(model, params);

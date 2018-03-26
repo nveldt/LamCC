@@ -7,7 +7,7 @@ function BestClus = GrowCliqueStep(A,times)
 
 BestClus = 0;
 BestSize = 0;
-
+n = size(A,1);
 for i = 1:times
     clus = randi(n);       % current cluster made of starter/seed/pivot node   
 

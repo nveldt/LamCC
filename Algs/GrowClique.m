@@ -18,7 +18,7 @@ c = zeros(n,1);
     ClusNum = 1;
     while numel(Vinds >0)
         SubA = A(Vinds,Vinds);
-        clusLocal = GrowCliqueStep2(SubA,times); % grab a cluster
+        clusLocal = GrowCliqueStep(SubA,times); % grab a cluster
 
         % the indices in clusLocal are the indices of the subgraph
         % A(Vinds,Vinds). We must get the original indices of these nodes
