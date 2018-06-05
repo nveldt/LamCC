@@ -4,13 +4,16 @@ Code and experimental results for paper:
 
 A Correlation Clustering Framework for Community Detection
 Nate Veldt, David Gleich, Anthony Wirth
-To appear in proceedings of the 27th WWW Conference, April 2018.
 
-Arxiv Preprint available at 
+In proceedings of the 27th WWW Conference, April 2018.
 
-https://arxiv.org/abs/1712.05825
+[https://dl.acm.org/citation.cfm?id=3178876.3186110](https://dl.acm.org/citation.cfm?id=3178876.3186110)
 
-(Arxiv title: Unifying Sparsest Cut, Cluster Deletion, and Modularity Clustering Objectives with Correlation Clustering)
+Full version available at 
+
+[https://arxiv.org/abs/1712.05825](https://arxiv.org/abs/1712.05825)
+
+(ArXiv title: Unifying Sparsest Cut, Cluster Deletion, and Modularity Clustering Objectives with Correlation Clustering)
 
 ## Running our algorithms
 
