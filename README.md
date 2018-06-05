@@ -46,7 +46,7 @@ These experiments requires code for the energy-minimization algorithm ICM of Bag
 This experiment makes use of several outside code packages. We give a brief description here. In order to obtain LP relaxations for LambdaCC, we must make use of a number of sophisticated techniques. Even then, it takes roughly a week of computation to obtain convergence.
 
 1. **Graclus**. Graclus is a multilevel graph partitioning algorithm developed by Dhillon et al. for optimizing objectives such as normalized cut and ratio cut without computing eigenvectors. Code can be obtained at [http://www.cs.utexas.edu/users/dml/Software/graclus.html](http://www.cs.utexas.edu/users/dml/Software/graclus.html). This algorithm requires the user to specify the exact number of clusters to form. In the main text we show results for partitioning the graph into just two clusters, since this gives very good LambdaCC results for small λ. We note that nearly identical results can be obtained using the graph partitioning tool Metis [http://glaros.dtc.umn.edu/gkhome/metis/metis/overview](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview).2. **Louvain**. For the local moving "Louvain" algorithm of Blondel et al., we use the implementation available at [https://github.com/ayanonagon/mkse312_project/tree/master/Community_BGLL_Matlab](https://github.com/ayanonagon/mkse312_project/tree/master/Community_BGLL_Matlab).
-3. **InfoMap**. The InfoMap algorithm is similar to Louvain, but instead optimizes the map equation (see [http://www.mapequation.org/](http://www.mapequation.org/)). Source code is available at http://www.mapequation.org/code.html.4. **Recursive Maximum Quasi-Clique (RMQC)**. We employ the Quick algorithm of Liu and Wong for finding maximum quasi-cliques; their code is available at [https://www.comp.nus.edu.sg/~wongls/projects/pattern-spaces/quick-v1/](https://www.comp.nus.edu.sg/~wongls/projects/pattern-spaces/quick-v1/). We run this procedure for a specified density ρ, and extract the largest clique in the network. We then remove the quasi-clique and recurse on the remaining nodes.5. **Recursive Maximum Clique (RMC)**. For recursively extracting maximum cliques we use the Parallel Maximum Clique (PMC) library ([http://maximumclique.com/](http://maximumclique.com/)). 
+3. **InfoMap**. The InfoMap algorithm is similar to Louvain, but instead optimizes the map equation (see [http://www.mapequation.org/](http://www.mapequation.org/)). Source code is available at http://www.mapequation.org/code.html.4. **Recursive Maximum Quasi-Clique (RMQC)**. We employ the Quick algorithm of Liu and Wong for finding maximum quasi-cliques; their code is available at [https://www.comp.nus.edu.sg/~wongls/projects/pattern-spaces/quick-v1/](https://www.comp.nus.edu.sg/~wongls/projects/pattern-spaces/quick-v1/). We run this procedure for a specified density ρ, and extract the largest clique in the network. We then remove the quasi-clique and recurse on the remaining nodes.5. **Recursive Maximum Clique (RMC)**. For recursively extracting maximum cliques we use the Parallel Maximum Clique (PMC) library ([http://maximumclique.com/](http://maximumclique.com/)) and in some cases also call the Maximal Cliques library as a subroutine ([https://github.com/aaronmcdaid/MaximalCliques](https://github.com/aaronmcdaid/MaximalCliques))
 
 
 For Lambda-Louvain, we employ the GenLouvain algorithm:
@@ -55,13 +55,13 @@ For Lambda-Louvain, we employ the GenLouvain algorithm:
 
 ## Experiment 5.3: Cliques in Large Collaboration Networks
 
-This experiment makes use of the PMC library ([http://maximumclique.com/](http://maximumclique.com/)). We use the Julia programming language for the recursive maximum clique algorithm.
+This experiment makes use of the PMC library ([http://maximumclique.com/](http://maximumclique.com/)), and the MaximalCliques library ([https://github.com/aaronmcdaid/MaximalCliques](https://github.com/aaronmcdaid/MaximalCliques)). We call both pacakges as subroutine in the Julia programming language for the recursive maximum clique algorithm.
 
 ## Experiment 5.4: Clustering Yeast Genes
 
 Details for where to obtain the original data are included in the main text of the paper.
 
-A number of the original data files are not included due to their size.
+A number of the original data files are not included in the repository due to their size.
 
 ## Experiment 5.5: Social Network Analysis
 
